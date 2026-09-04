@@ -1,0 +1,11 @@
+{
+    "name": "Sayedur",
+    "age": 23,
+    "country": "BD",
+    "skills": [
+        "Python",
+        "JavaScript",
+        "Java",
+        "SQL"
+    ]
+}

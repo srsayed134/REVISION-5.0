@@ -1,0 +1,11 @@
+{
+    "name": "Sayedur",
+    "age": 25,
+    "country": "Bangladesh",
+    "skills": [
+        "Python",
+        "SQL",
+        "AI"
+    ],
+    "goal": "AI Engineer"
+}

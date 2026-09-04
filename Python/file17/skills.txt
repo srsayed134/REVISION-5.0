@@ -1,0 +1,5 @@
+Python
+SQL
+Machine Learning
+Deep Learning
+Aritificial Intelligence

@@ -36,7 +36,7 @@ del user["country"]
 print(user)
 """
 #Challenge 05
-
+"""
 person = {
     "name": "Sayedur",
     "age": 25,
@@ -73,7 +73,7 @@ if person.get("email"):
     print("Email is avilable")
 else:
     print("Email is not available")
-
+"""
 #Challenge 07
 """
 user = {
@@ -93,7 +93,7 @@ print(pg_field)
 """
 
 #Challenge 08
-
+"""
 person = {
    "name": "Sayedur Rahman",
    "age": 22,
@@ -112,3 +112,4 @@ qualification = person["education"]["courses"][2]
 print(name)
 print(second_skill)
 print(qualification)
+"""

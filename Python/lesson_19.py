@@ -134,7 +134,7 @@ models = []
 
 while True:
     print("Enter details for new model: ")
-    name = input("Name (for exit type 'Quit'): ")
+    name = input("Name (for exit type 'Quit'): ") 
     if name.lower() == "quit":
         break
 

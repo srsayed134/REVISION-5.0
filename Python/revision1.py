@@ -681,6 +681,7 @@ print(plus(10,30))
 """
 
 #Challenge 08
+"""
 
 user1 = {
     "name": "Sayed",
@@ -700,6 +701,7 @@ user3 = {
     "profession": "developers"
 }
 user = [user1, user2, user3]
+"""
 """
 import json
 with open("users.json", "w") as file:
@@ -725,12 +727,14 @@ print(json_dict) #And this is dict from json string
 
 """
 
+"""
 num = 1
 while True:
     print(f"#Quiz{num}")
     if num == 10:
         break
     num += 1
+"""
 
 #Quiz1 : local can only use in restrict enviornment but global variable can be used use anywhere in the progreem
 #Quiz2 dont understand
@@ -744,4 +748,178 @@ while True:
 #Quiz10 dump is from json export in json file dumps is to referen json as string and load import json file in json formet and loads is import json file as json string
 
 
+# Block 6
 
+#Challenge 01
+
+class Employee:
+    def __init__(self, name, salary):
+        self.ename = name
+        self.esalary = salary
+
+class Developer(Employee):
+    def __init__(self, name, salary, language):
+        super().__init__(name, salary)
+        self.elanguage = language
+
+    def show_info(self):
+        print(f"Name: {self.ename}, Salary: {self.esalary}, Language: {self.elanguage}")
+
+
+employee1 = Developer("Sayed", 120000, "Python")
+employee1.show_info()
+
+
+
+#Challenge 02
+
+class Animal:
+    def speak(self):
+        print("Animal make sound")
+class Cat(Animal):
+    def speak(self):
+        print("Mewo")
+class Dog(Animal):
+    def speak(self):
+        print("Woof")
+
+cat1 = Cat()
+cat1.speak()
+dog1 = Dog()
+dog1.speak()
+
+animals = [cat1, dog1]
+
+for animal in animals:
+    animal.speak()
+
+#Challenge 03
+
+class Cpu:
+    def process(self):
+        print("CPU processing")
+
+class Computer():
+    def __init__(self):
+        self.cpu = Cpu()
+
+    def run(self):
+        self.cpu.process()
+        print(f"Computer is running")
+
+computer1 = Computer()
+computer1.run()
+        
+
+#Challenge 04
+#Dependency ingection
+class CPU:
+    def process(self):
+        print("CPU processing")
+
+class Computer:
+    def __init__(self, cpu):
+        self.ccpu = cpu
+
+    def run(self):
+        self.ccpu.process()
+        print("Computer is running")
+
+computer1 = Computer(CPU())
+computer1.run() #Because we can now know from where is Computer(CPU()) comming
+
+
+#Challenge 05
+
+class Product:
+    def __init__(self, name, price):
+        self.pname = name
+        self.pprice = price
+
+    def __str__(self):
+        return f"The product name is {self.pname} and its price {self.pprice}"
+
+    def __repr__(self):
+        return f"Product(Name : '{self.pname}' Price : '{self.pprice}')"
+
+product1 = Product("IPhone 18", 1299)
+print(product1)
+print(repr(product1))
+
+#Challenge 06
+
+class Course:
+    def __init__(self, lessons):
+        self.clessons = lessons
+
+    def __len__(self):
+        return len(self.clessons)
+
+    def __getitem__(self, key):
+        return self.clessons[key]
+
+course1 = Course([
+    "Python",
+    "OOP",
+    "Dataclasses",
+    "Typing"])
+
+print(len(course1))
+print(course1[3])
+print(course1[1])
+
+
+#Challenge 07
+
+class AIModel:
+    def __init__(self, name, version):
+        self.mname = name
+        self.mversion = version
+
+    def __eq__(self, value):
+        return self.mname and self.mversion == value
+
+model1 = AIModel("GPT", "5.6")
+model2 = AIModel("GPT", "5.6")
+model3 = AIModel("Claude", "4")
+
+print(model1 == model2)
+print(model1 == model3)
+
+
+#Challenge 08
+
+class Engine:
+    def start(self):
+        print("Engine has started")
+
+class Car:
+    def __init__(self, engine):
+        self.eengine = engine
+    def start(self):
+        self.engine.start()
+        print("Car engine started")
+
+class ElectronicEngine:
+    def start(self):
+        print("Electronic engine started")
+
+car1 = Car(Engine())
+car1.start()
+        
+
+#Challenge 09
+#Challenge 10
+
+# Quiz1 is a means you are child elemtns and has means you own this attribute
+
+#Quiz2 super inheriate attributes from parent element
+#Quiz3 if there is a method from parent but object create own method 
+
+#Quiz4 duck typing and different behave for defentent object by same method
+#Quiz5 str return string without needint print method it can be initialize
+#Quiz6 str and repr str return string and repr for understanding output to developer 
+#Quiz7 len return lenght of attributes
+#Quiz8 getitem retun index or position  of attributes
+#Quiz9 this is composition because it has engine method not inherit from parent
+#Quiz10 the difference is one has method and aother get dependency injection

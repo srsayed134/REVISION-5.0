@@ -23,6 +23,7 @@ for number in numbers:
     print(number)
 """
 #Challenge 03
+"""
 
 squares = (
     x**2
@@ -32,8 +33,10 @@ squares = (
 
 for number in squares:
     print(number)
+"""
 
 #Challenge 04
+"""
 #Generator expression
 data = [
     {"name": "Sayed", "score": 85},
@@ -61,7 +64,9 @@ users = high_score(data)
 for user in users:
     print(user)
 
+"""
 #Challenge 05
+"""
 
 predictions = [
     {"model": "GPT", "score": 0.91},
@@ -83,3 +88,5 @@ poutput = high_confidence(predictions)
 
 for data in poutput:
     print(data)
+
+"""

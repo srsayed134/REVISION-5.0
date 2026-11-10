@@ -1,0 +1,37 @@
+CREATE DATABASE name ;
+\c name menas connect name to database
+CREATE TABLE name();
+\dt table list
+DROP TABLE name; delete table name
+
+What you want	Command
+List databases	\l
+Connect to database	\c database_name
+Show current database	SELECT current_database();
+List tables	\dt
+List tables in all schemas	\dt *.*
+Describe table	\d table_name
+Show table data	SELECT * FROM table_name;
+Delete table	DROP TABLE table_name;
+Delete database	DROP DATABASE database_name;
+Exit PostgreSQL	\q
+
+Start Psql:- brew services list
+Get into:- psql -d university_db
+Example of table creation :- 
+CREATE TABLE students (
+    student_id INTEGER PRIMARY KEY,
+    student_name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) UNIQUE,
+    age INTEGER CHECK (age >= 16),
+    gpa DECIMAL(3,2) CHECK (gpa >= 0 AND gpa <= 4)
+);
+
+Update:
+UPDATE table_name
+SET column_name = new_value
+WHERE condition;
+---example---
+UPDATE table name 
+SET column name 
+WHERE id = 2
